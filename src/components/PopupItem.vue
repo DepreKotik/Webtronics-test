@@ -1,7 +1,8 @@
 <template>
   <section
     class="wrapper wrapper--center-mod"
-    :class="{ active: isActive, disable: !isActive }">
+    :class="{ active: isActive, disable: !isActive }"
+  >
     <div class="container">
       <dl>
         <div class="list__item">
@@ -25,7 +26,12 @@
           <dd>{{ ticket.date }}</dd>
         </div>
       </dl>
-      <button-item :type="button" @click="this.$emit('closeTicket')" :style="{width: '150px', margin: '20px auto 0 auto'}">Close</button-item>
+      <button-item
+        :type="button"
+        @click="this.$emit('closeTicket')"
+        :style="{ width: '150px', margin: '20px auto 0 auto' }"
+        >Close</button-item
+      >
     </div>
   </section>
 </template>
@@ -44,7 +50,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .disable {
   display: none;
 }
@@ -65,6 +71,19 @@ export default {
   grid-template-columns: 1fr 5fr;
   padding: 10px;
   border-bottom: 1px solid #dbd4d4;
+
+  @media (max-width: 769px) {
+    display: block;
+    border-bottom: none;
+  }
 }
 
+dt {
+  font-weight: 700;
+  font-size: 17px;
+
+  @media (max-width: 769px) {
+    margin-bottom: 15px;
+  }
+}
 </style>

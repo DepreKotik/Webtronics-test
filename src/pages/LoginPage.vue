@@ -2,8 +2,8 @@
   <section class="wrapper wrapper--center-mod">
     <form @submit="submitForm" class="container">
       <title-item>Sign in</title-item>
-      <input class="Login__input" v-model="name" type="text" name="name" placeholder="Username">
-      <input class="Login__input" type="password" v-model="password" ref="password" name="password" placeholder="Password">
+      <input class="login__input" v-model="name" type="text" name="name" placeholder="Username">
+      <input class="login__input" type="password" v-model="password" ref="password" name="password" placeholder="Password">
       <button class="login__password-button" @click="setPasswordState" type="button">{{buttonText}}</button> 
       <button-item :type="submit">Log In</button-item> 
     </form>
@@ -43,18 +43,19 @@ export default {
 </script>
 
 <style>
-.Login__input {
+.login__input {
   display: block;
   padding: 10px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
+  width: 100%;
 }
 
-.Login__input + .Login__input {
+.login__input + .login__input {
   margin-top: 20px;
 }
 
-.Login__input:focus-visible {
+.login__input:focus-visible {
   border: 1px solid #3dcaca;
   outline: none;
 }

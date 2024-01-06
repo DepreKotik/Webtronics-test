@@ -21,6 +21,7 @@ header {
   padding: 20px;
   background-color: #e0e0e0;
   border-radius: 5px;
+  min-width: 290px;
 }
 
 ul {

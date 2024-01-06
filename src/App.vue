@@ -6,7 +6,7 @@
 
 </script>
 
-<style>
+<style lang="scss">
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +25,10 @@
   min-height: 100vh;
   background-color: rgb(237 237 237);
   padding: 40px;
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+  }
 }
 
 .wrapper--center-mod {
@@ -38,6 +42,7 @@
   border: 1px solid #dbd4d4;
   border-radius: 5px;
   background-color: #fff;
+  min-width: 290px;
 }
 
 

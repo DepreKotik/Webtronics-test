@@ -55,12 +55,18 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 .profile__label {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px
+  gap: 20px;
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
 }
 
 .profile__label + .profile__label {
@@ -73,6 +79,10 @@ export default {
   padding: 5px 10px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
+  
+  @media (max-width: 769px) {
+    width: 100%;
+  }
 }
 
 textarea {

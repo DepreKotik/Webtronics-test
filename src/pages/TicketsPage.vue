@@ -3,12 +3,12 @@
     <header-item></header-item>
     <div class="container">
       <title-item :style="{marginBottom: '0'}">Tickets</title-item>
-      <select @change="selectOption" :style="{margin: '0 0 20px auto'}" class="profile__input">
+      <select @change="selectOption">
         <option value="new">New ones first</option>
         <option value="old">Old ones first</option>
         <option value="id">By id</option>
       </select>
-      <table :style="{ width: '100%' }">
+      <table>
         <thead>
           <tr>
             <th>Author</th>
@@ -82,17 +82,47 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+select {
+  width: 140px;
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  margin: 0 0 20px auto;
+}
+
+select:focus-visible {
+  border: 1px solid #3dcaca;
+  outline: none;
+}
+
+table {
+  width: 100%;
+}
+
 tr {
   display: grid;
   grid-template-columns: 2fr 0.5fr 3fr 5fr 2fr 2fr;
   gap: 10px;
   padding: 10px;
   border-bottom: 1px solid #dbd4d4;
+
+  @media (max-width: 769px) {
+    grid-template-columns: 2fr 2fr 0.5fr;
+  }
 }
 
 th {
   text-align: start;
+}
+
+th:nth-child(1),
+th:nth-child(2),
+th:nth-child(4) {
+  @media (max-width: 769px) {
+    display: none;
+  }
 }
 
 thead tr {
