@@ -2,8 +2,8 @@
   <section class="wrapper wrapper--center-mod">
     <form @submit="submitForm" class="container">
       <title-item>Sign in</title-item>
-      <input class="login__input" v-model="name" type="text" name="name" placeholder="Username">
-      <input class="login__input" type="password" v-model="password" ref="password" name="password" placeholder="Password">
+      <input class="login__input" v-model="name" type="text" name="name" placeholder="Username: admin">
+      <input class="login__input" type="password" v-model="password" ref="password" name="password" placeholder="Password: admin">
       <button class="login__password-button" @click="setPasswordState" type="button">{{buttonText}}</button> 
       <button-item :type="submit">Log In</button-item> 
     </form>
